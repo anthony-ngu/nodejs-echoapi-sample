@@ -1,7 +1,14 @@
 ###Here's a simple guide on how to create a Node.js app hosted in Azure that will handle your Amazon Echo's API calls.
 
-* [You will want to buy an Amazon Echo if you haven't already.](http://amzn.to/1Lo5eho)
-* [Here's a quick example video of what I did with this in the OpenSmartHub](https://www.youtube.com/watch?v=y7k8XVTqgDU)
+<a href="http://amzn.to/1Lo5eho">
+    <p align="center">
+      <img src="amazon_echo-300x300.jpg">
+      <br/>
+      You will want to buy an Amazon Echo if you haven't already.
+    </p>
+</a>
+
+[Here's a quick example video of what I did in the OpenSmartHub](https://www.youtube.com/watch?v=y7k8XVTqgDU)
 
 0. You will want to download and install Node.js if you haven't already.
 0. Create an Azure account if you haven't already and create a new web app.
@@ -50,7 +57,7 @@
         TurnOff    turn off {spark two|Device}
         TurnOff    turn off {coffee|Device}
         ```
-        
+
     0. After this, set your app to be ready for testing and you are on your way!
 0. Call Alexa with your Spoken Name by saying "Alexa, open {YourSpokenAppNameHere}"
 0. Now you can say the commands that you've designated in both your Nodejs web app and your Amazon app declarations for your response!
