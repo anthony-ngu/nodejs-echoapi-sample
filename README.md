@@ -14,39 +14,43 @@
     0. Give your "App Endpoint" which will be your Azure webapp's URL + the api endpoint. (Example: "https://echotest.azurewebsites.net/api/echo")
 0. In your Interaction Model:
     0. Fill out your "Intent Schema". The intent is the name of the function, slots are parameters, and the type when "literal" will give you back the speech-to-text recognized word. More info on this here.
-```
-{
-    "intents": [
+
+        ```
         {
-            "intent": "TurnOn",
-            "slots": [
+            "intents": [
                 {
-                    "name": "Device",
-                    "type": "LITERAL"
-                }
-            ]
-        },
-        {
-            "intent": "TurnOff",
-            "slots": [
+                    "intent": "TurnOn",
+                    "slots": [
+                        {
+                            "name": "Device",
+                            "type": "LITERAL"
+                        }
+                    ]
+                },
                 {
-                    "name": "Device",
-                    "type": "LITERAL"
+                    "intent": "TurnOff",
+                    "slots": [
+                        {
+                            "name": "Device",
+                            "type": "LITERAL"
+                        }
+                    ]
                 }
             ]
         }
-    ]
-}
-```
+        ```
+
     0. Fill out your "Spoken Utterances". They should be tab separated between the intent and the sample phrases. Something interesting to note is that they suggest that you provide a sample for every number of literal device phrases from min to max. (In my case from 1-3 words, thus the repetitions.) It also does not like it when you have multiple of the same literals anywhere in the file.. More info on this here.
-```
-TurnOn    turn on {living room switch|Device}
-TurnOn    turn on {spark one|Device}
-TurnOn    turn on {example|Device}
-TurnOff    turn off {living room two|Device}
-TurnOff    turn off {spark two|Device}
-TurnOff    turn off {coffee|Device}
-```
+
+        ```
+        TurnOn    turn on {living room switch|Device}
+        TurnOn    turn on {spark one|Device}
+        TurnOn    turn on {example|Device}
+        TurnOff    turn off {living room two|Device}
+        TurnOff    turn off {spark two|Device}
+        TurnOff    turn off {coffee|Device}
+        ```
+        
     0. After this, set your app to be ready for testing and you are on your way!
 0. Call Alexa with your Spoken Name by saying "Alexa, open {YourSpokenAppNameHere}"
 0. Now you can say the commands that you've designated in both your Nodejs web app and your Amazon app declarations for your response!
