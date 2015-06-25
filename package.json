@@ -1,0 +1,15 @@
+{
+  "name": "nodejs-echoapi-sample",
+  "version": "0.0.1",
+  "description": "A server that can be hosted and responds to echo api calls",
+  "homepage": "https://github.com/anthony-ngu/nodejs-echoapi-sample",
+  "keywords":["echo", "amazon", "api"],
+  "author": {
+    "name" : "Anthony Ngu",
+    "url" : "http://anthonyngu.com/"
+  },
+  "dependencies": {
+    "express": "4.12.3",
+    "ejs":"2.3.1"
+  }
+}
